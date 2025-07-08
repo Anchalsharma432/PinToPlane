@@ -4,22 +4,22 @@ import Navbar from './components/Navbar';
 const HeroSection = () => {
   return (
     <section
-  className="w-full min-h-screen bg-white flex items-center justify-between px-8 py-20"
+  className="md:p-20 xl:p-40 lg:p-30 p-10 w-full max-h-[800px] bg-white flex justify-between"
   style={{
-    backgroundImage: "url('/heroImage.jpeg')",
+    backgroundImage: "url('/heroImage.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
   }}
 >
-  <div className="max-w-xl bg-white bg-opacity-0 p-6 rounded">
-    <h2 className="text-3xl font-semibold text-gray-600 mb-4">
+  <div className="max-w-xl rounded">
+    <h2 className="text-left text-3xl font-semibold text-gray-600 mb-4">
       Quality cleaning at a fair price.
     </h2>
-    <h1 className="text-5xl font-bold text-black leading-tight mb-6">
+    <h1 className="text-left text-5xl font-bold text-black leading-tight mb-6">
       Specialized, efficient,<br /> and thorough cleaning services
     </h1>
-    <p className="text-gray-600 mb-8">
+    <p className="text-left text-gray-600 mb-8">
       We provide performing cleaning tasks using the least amount of time, energy, and money.
     </p>
     <div className="flex gap-4">
@@ -38,14 +38,14 @@ const HeroSection = () => {
 
 const ServicesSection = () => {
   return (
-    <section className="px-8 py-16 bg-white">
+    <section className="md:p-20 xl:p-40 lg:p-30 p-10 bg-white">
       <div className="flex justify-between items-start mb-10">
         <div>
-          <h2 className="text-3xl font-bold text-black mb-2">
-            We Always Provide The Best Service
+          <h2 className="text-left text-3xl font-bold text-black mb-2">
+            We Always Provide The <br/>Best Service
           </h2>
         </div>
-        <div className="max-w-md text-gray-600">
+        <div className="text-left max-w-md text-gray-600">
           <h3 className="font-semibold mb-2 text-lg">Services</h3>
           <p>
             While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:
@@ -57,15 +57,15 @@ const ServicesSection = () => {
         {[
           {
             title: "Office Cleaning",
-            image: "/office-cleaning.png",
+            image: "/heroImage.png",
           },
           {
             title: "Spring Cleaning",
-            image: "/spring-cleaning.png",
+            image: "/heroImage.png",
           },
           {
             title: "House Cleaning",
-            image: "/house-cleaning.png",
+            image: "/heroImage.png",
           },
         ].map((service, index) => (
           <div
