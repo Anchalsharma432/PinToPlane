@@ -54,13 +54,11 @@ const ServicesSection = () => {
             Best Service
           </h2>
         </div>
-        <div className="text-left max-w-md text-black">
-          <h3 className="font-semibold mb-2 text-lg">Services</h3>
-          <p>
+        <p className="text-left max-w-md text-gray-600 text-sm">
+          <strong className="font-semibold text-md text-black">Services</strong><br/>
             While we can customize your cleaning plan to suit your needs, most
             clients schedule regular cleaning services:
-          </p>
-        </div>
+        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -122,19 +120,20 @@ const experts = [
 
 const CleaningTeam = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <section className="md:p-10 xl:p-30 lg:p-20 p-5max-w-6xl mx-auto">
       {/* Header Section */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-gray-900">
+      <div className="flex justify-between items-start text-center mb-10">
+        <h2 className="text-3xl text-left font-bold text-gray-900">
           Effective Cleaning Requires <br /> an Expert Cleaning Team
         </h2>
-        <p className="mt-4 text-sm text-gray-600 max-w-xl mx-auto">
-          <strong>Expert Team</strong> <br />
+        <p className="text-left pl-6 text-sm text-gray-600 max-w-md ">
+          <strong className="text-black text-md">Expert Team</strong> <br />
           We have professional expert cleaning staff ensuring top-notch
           cleanliness and hygiene for your space.
         </p>
-        <hr className="mt-6 border-gray-300 w-24 mx-auto" />
+        
       </div>
+      <hr className="mt-6 border-gray-300 w-24 mx-auto" />
 
       {/* Cards */}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -147,7 +146,7 @@ const CleaningTeam = () => {
             <img
               src={expert.image}
               alt={expert.name}
-              className="w-full h-60 object-cover rounded-t-xl"
+              className="h-auto  object-cover rounded-t-xl"
             />
 
             {/* Text content below */}
@@ -178,7 +177,7 @@ const CleaningTeam = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
