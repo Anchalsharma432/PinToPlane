@@ -4,7 +4,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div className="max-w mx-auto px-4 sm:px-6 xl:px-35 lg:px-20 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src="/logo.png" alt="PinToPlane Logo" className="h-8 w-8" />
