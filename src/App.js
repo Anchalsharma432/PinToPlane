@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import GetQuote from './components/GetQuote';
 const HeroSection = () => {
   return (
     <section
@@ -97,6 +98,7 @@ function App() {
         <Navbar/>
       <HeroSection />
       <ServicesSection />
+      <GetQuote />
     </main>
     </div>
   );
