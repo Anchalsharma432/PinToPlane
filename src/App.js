@@ -2,8 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import GetQuote from "./components/GetQuote";
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar } from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar, FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa6";
 import KnowMore from "./components/KnowMore";
+
 
 const HeroSection = () => {
   return (
@@ -182,6 +183,66 @@ const CleaningTeam = () => {
   );
 };
 
+const TestimonialSection = () => {
+return (
+    <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      {/* Left Side: Heading + Description + Buttons */}
+      <div className="text-center md:text-left">
+        <h2 className="text-3xl font-bold text-gray-900">
+          Feedback About Their Experience With Us
+        </h2>
+        <p className="mt-4 text-gray-600 max-w-md mx-auto md:mx-0">
+          Read testimonials from our satisfied clients. See how our cleaning services have made a difference in their lives and homes.
+        </p>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-center md:justify-start space-x-4 mt-6">
+          <button className="w-10 h-10 rounded-full border border-blue-500 text-blue-500 flex items-center justify-center hover:bg-blue-100 transition">
+            <FaChevronLeft />
+          </button>
+          <button className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition">
+            <FaChevronRight />
+          </button>
+        </div>
+      </div>
+
+      {/* Right Side: Testimonial Card */}
+      <div className="border border-blue-400 rounded-2xl p-6 flex items-start shadow-md w-full max-w-xl mx-auto">
+        {/* Image */}
+        <img
+          src="/cleanerImg2.png" // Replace with your image path in public folder
+          alt="Robert Fox"
+          className="w-20 h-20 rounded-lg object-cover mr-5"
+        />
+
+        {/* Content */}
+        <div className="flex-1">
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="text-md font-semibold text-gray-900">Robert Fox</h3>
+              <p className="text-sm text-gray-500">Business Man</p>
+            </div>
+            <FaQuoteRight className="text-blue-400 text-2xl" />
+          </div>
+
+          {/* Stars */}
+          <div className="flex text-yellow-400 mt-2">
+            {Array(5).fill().map((_, i) => (
+              <FaStar key={i} />
+            ))}
+          </div>
+
+          {/* Testimonial */}
+          <p className="text-sm text-gray-700 mt-3">
+            Excellent service! The team was punctual, thorough, and left my home sparkling clean. Highly recommend for anyone needing a reliable and detailed cleaning service.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 function App() {
   return (
     <div className="App">
@@ -192,6 +253,7 @@ function App() {
         <GetQuote />
         <CleaningTeam />
         <KnowMore />
+        <TestimonialSection />
       </main>
     </div>
   );
