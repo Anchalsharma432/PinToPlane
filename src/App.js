@@ -122,7 +122,7 @@ const experts = [
 
 const CleaningTeam = () => {
   return (
-    <section className="md:p-10 xl:p-30 lg:p-20 p-5max-w-6xl mx-auto">
+    <section className="md:p-10 xl:p-30 lg:p-20 p-5 max-w-6xl mx-auto">
       {/* Header Section */}
       <div className="flex justify-between items-start text-center mb-10 pb-5 border-b border-[#44acfc]">
         <h2 className="text-3xl text-left font-bold text-gray-900">
