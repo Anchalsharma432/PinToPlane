@@ -32,10 +32,30 @@ const KnowMore = () => {
           <p className="text-gray-900 text-md mb-6">
           We make your space shine! Professional and reliable cleaning service company providing top-notch solutions for homes and businesses. Satisfaction guaranteed!"
           </p>
+          <div className="grid grid-cols-2 gap-4 max-w-md mt-6">
+  {[
+    "Vetted professionals",
+    "Next day availability",
+    "Standard cleaning tasks",
+    "Affordable Prices",
+    "Best Quality",
+    "Affordable Prices",
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="flex items-center gap-2 px-4 py-2 rounded-md bg-gray-50"
+    >
+      <span className="text-[#44acfc] text-lg">✔️</span>
+      <span className="text-sm font-semibold text-gray-800">{item}</span>
+    </div>
+  ))}
+</div>
+
           <button className="bg-[#44acfc] hover:bg-[#3499e6] text-white text-sm font-semibold py-2 px-4 rounded shadow-md transition duration-300">
             Get a quote
           </button>
         </div>
+        
       </div>
     </section>
   )
