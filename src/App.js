@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import GetQuote from "./components/GetQuote";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar } from "react-icons/fa6";
+import KnowMore from "./components/KnowMore";
 
 const HeroSection = () => {
   return (
@@ -122,7 +123,7 @@ const CleaningTeam = () => {
   return (
     <section className="md:p-10 xl:p-30 lg:p-20 p-5max-w-6xl mx-auto">
       {/* Header Section */}
-      <div className="flex justify-between items-start text-center mb-10">
+      <div className="flex justify-between items-start text-center mb-10 pb-5 border-b border-[#44acfc]">
         <h2 className="text-3xl text-left font-bold text-gray-900">
           Effective Cleaning Requires <br /> an Expert Cleaning Team
         </h2>
@@ -133,7 +134,7 @@ const CleaningTeam = () => {
         </p>
         
       </div>
-      <hr className="mt-6 border-gray-300 w-24 mx-auto" />
+      
 
       {/* Cards */}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -190,6 +191,7 @@ function App() {
         <ServicesSection />
         <GetQuote />
         <CleaningTeam />
+        <KnowMore />
       </main>
     </div>
   );
