@@ -6,12 +6,12 @@ const GetQuote = () => {
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Text Area */}
         <div className="flex-1 text-left">
-          <p className="text-gray-900 text-sm mb-2">Affordable cleaning solutions</p>
-          <h1 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+          <p className="text-gray-900 text-sm md:text-md mb-2">Affordable cleaning solutions</p>
+          <h1 className="text-xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
             High-Quality and  Friendly <br />
             Services at Fair Prices
           </h1>
-          <p className="text-gray-900 text-lg mb-6">
+          <p className="text-gray-900 text-sm md:text-md mb-6">
             We provide comprehensive cleaning services tailored to your needs.
             From residential cleaning services
           </p>

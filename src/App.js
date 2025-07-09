@@ -51,13 +51,13 @@ const ServicesSection = () => {
     <section className="md:p-10 xl:p-35 lg:p-20 p-5 bg-white">
       <div className="flex md:flex-row flex-col justify-between items-start mb-10">
         <div>
-          <h2 className="text-left text-3xl font-bold text-black mb-2">
+          <h2 className="text-left  md:text-5xl text-xl font-bold text-black mb-2">
             We Always Provide The <br />
             Best Service
           </h2>
         </div>
-        <p className="text-left max-w-md text-gray-600 text-sm">
-          <strong className="font-semibold text-md text-black">Services</strong><br/>
+        <p className="text-left max-w-md text-gray-600 md:text-md text-sm">
+          <strong className="font-semibold  md:text-lg text-md text-black">Services</strong><br/>
             While we can customize your cleaning plan to suit your needs, most
             clients schedule regular cleaning services:
         </p>
