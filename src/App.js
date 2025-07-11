@@ -1,9 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import GetQuote from "./components/GetQuote";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar, FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa6";
 import KnowMore from "./components/KnowMore";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 const HeroSection = () => {
@@ -183,8 +185,171 @@ const CleaningTeam = () => {
   );
 };
 
+const PricingPlans = () => {
+const [billing, setBilling] = useState("monthly");
+
+  const prices = {
+    monthly: ["59.00", "69.00", "99.00"],
+    yearly: ["599.00", "699.00", "999.00"]
+  };
+
+  return (
+    <div className="bg-blue-500 pt-16 pb-8 px-4 text-white relative overflow-hidden">
+      <div className="max-w-6xl mx-auto text-center">
+        <p className="text-sm uppercase">Our Pricing</p>
+        <h2 className="text-3xl md:text-4xl font-bold mt-2">
+          Choose From Our Lowest <br className="hidden md:block" /> Plans and Prices
+        </h2>
+
+        {/* Toggle */}
+        <div className="mt-6 flex justify-center">
+          <div className="bg-white rounded-full p-1 flex space-x-1 shadow-inner">
+            <button
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition ${
+                billing === "monthly" ? "bg-blue-500 text-white" : "text-blue-500"
+              }`}
+              onClick={() => setBilling("monthly")}
+            >
+              Monthly
+            </button>
+            <button
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition ${
+                billing === "yearly" ? "bg-blue-500 text-white" : "text-blue-500"
+              }`}
+              onClick={() => setBilling("yearly")}
+            >
+              Yearly
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Cards */}
+      <div className="relative z-10 mt-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-black">
+        {/* Basic Package */}
+        <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+          <h3 className="font-semibold text-lg">BASIC PACKAGE</h3>
+          <p className="text-3xl font-bold text-blue-500 mt-4">
+            ${prices[billing][0]}<span className="text-sm font-normal">/{billing === "monthly" ? "Monthly" : "Yearly"}</span>
+          </p>
+          <ul className="mt-6 space-y-2 text-sm list-[circle] text-left">
+            <li>Dusting of all surfaces</li>
+            <li>Sweeping and mopping floors</li>
+            <li>Vacuuming carpets and rugs</li>
+            <li>Cleaning of kitchen surfaces</li>
+            <li>Cleaning of bathroom surfaces</li>
+            <li>Emptying trash bins</li>
+          </ul>
+          <button className="mt-6 border px-6 py-2 rounded-md font-semibold hover:bg-blue-500 hover:text-white transition">
+            Book Now
+          </button>
+        </div>
+
+        {/* Enterprise Package */}
+        <div className="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center">
+          <h3 className="font-semibold text-lg">ENTERPRISE PACKAGE</h3>
+          <p className="text-3xl font-bold text-blue-500 mt-4">
+            ${prices[billing][1]}<span className="text-sm font-normal">/{billing === "monthly" ? "Monthly" : "Yearly"}</span>
+          </p>
+          <ul className="mt-6 space-y-2 text-sm list-[circle] text-left">
+            <li>All services in the Basic Plan</li>
+            <li>Detailed dusting</li>
+            <li>Wiping down of kitchen appt</li>
+            <li>Cleaning inside the microwave</li>
+            <li>Changing bed linens</li>
+            <li>Spot cleaning walls and doors</li>
+          </ul>
+          <button className="mt-6 border px-6 py-2 rounded-md font-semibold hover:bg-blue-500 hover:text-white transition">
+            Book Now
+          </button>
+        </div>
+
+        {/* Premium Package */}
+        <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+          <h3 className="font-semibold text-lg">PREMIUM PACKAGE</h3>
+          <p className="text-3xl font-bold text-blue-500 mt-4">
+            ${prices[billing][2]}<span className="text-sm font-normal">/{billing === "monthly" ? "Monthly" : "Yearly"}</span>
+          </p>
+          <ul className="mt-6 space-y-2 text-sm list-[circle] text-left">
+            <li>All services in the Clean Plan</li>
+            <li>Deep cleaning of kitchen appt</li>
+            <li>baseboards, door frames, & vents</li>
+            <li>Organization of closets pantries</li>
+            <li>Carpet, upholstery spot cleaning</li>
+            <li>Detailed bathroom cleaning</li>
+          </ul>
+          <button className="mt-6 border px-6 py-2 rounded-md font-semibold hover:bg-blue-500 hover:text-white transition">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const testimonials = [
+  {
+    name: "Robert Fox",
+    role: "Business Man",
+    image: "/cleanerImg2.png",
+    feedback:
+      "Excellent service! The team was punctual, thorough, and left my home sparkling clean. Highly recommend for anyone needing a reliable and detailed cleaning service.",
+  },
+  {
+    name: "Emily Johnson",
+    role: "Teacher",
+    image: "/cleanerImg1.png",
+    feedback:
+      "They cleaned every corner of our house like it was brand new. I love the eco-friendly products they use too!",
+  },
+  {
+    name: "David Smith",
+    role: "Engineer",
+    image: "/cleanerImg3.png",
+    feedback:
+      "I've used multiple cleaning services, but this one really stands out for their attention to detail and professionalism.",
+  },
+  {
+    name: "Sofia Lee",
+    role: "Freelancer",
+    image: "/cleanerImg2.png",
+    feedback:
+      "Fast, friendly, and super clean. It’s such a relief coming home to a tidy space. Definitely using them again.",
+  },
+];
+
+const variants = {
+  enter: (direction) => ({
+    x: direction > 0 ? -300 : 300, // reverse this line
+    opacity: 0,
+    position: "absolute",
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    position: "static",
+  },
+  exit: (direction) => ({
+    x: direction < 0 ? -300 : 300, // reverse this line too
+    opacity: 0,
+    position: "absolute",
+  }),
+};
+
+
 const TestimonialSection = () => {
-return (
+  const [[currentIndex, direction], setCurrentIndex] = useState([0, 0]);
+
+  const paginate = (newDirection) => {
+    setCurrentIndex([
+      (currentIndex + newDirection + testimonials.length) % testimonials.length,
+      newDirection,
+    ]);
+  };
+
+  const current = testimonials[currentIndex];
+
+  return (
     <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* Left Side: Heading + Description + Buttons */}
       <div className="text-center md:text-left">
@@ -197,50 +362,65 @@ return (
 
         {/* Navigation Buttons */}
         <div className="flex justify-center md:justify-start space-x-4 mt-6">
-          <button className="w-10 h-10 rounded-full border border-blue-500 text-blue-500 flex items-center justify-center hover:bg-blue-100 transition">
+          <button
+            onClick={() => paginate(-1)}
+            className="w-10 h-10 rounded-full border border-blue-500 text-blue-500 flex items-center justify-center hover:bg-blue-100 transition"
+          >
             <FaChevronLeft />
           </button>
-          <button className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition">
+          <button
+            onClick={() => paginate(1)}
+            className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center hover:bg-blue-600 transition"
+          >
             <FaChevronRight />
           </button>
         </div>
       </div>
 
-      {/* Right Side: Testimonial Card */}
-      <div className="border border-blue-400 rounded-2xl p-6 flex items-start shadow-md w-full max-w-xl mx-auto">
-        {/* Image */}
-        <img
-          src="/cleanerImg2.png" // Replace with your image path in public folder
-          alt="Robert Fox"
-          className="w-20 h-20 rounded-lg object-cover mr-5"
-        />
+      {/* Right Side: Animated Testimonial Card */}
+      <div className="relative w-full max-w-xl mx-auto min-h-[200px]">
+        <AnimatePresence custom={direction} mode="wait">
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.5 }}
+            className="border border-blue-400 rounded-2xl p-6 flex items-start shadow-md bg-white"
+          >
+            <img
+              src={current.image}
+              alt={current.name}
+              className="w-20 h-20 rounded-lg object-cover mr-5"
+            />
 
-        {/* Content */}
-        <div className="flex-1">
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className="text-md font-semibold text-gray-900">Robert Fox</h3>
-              <p className="text-sm text-gray-500">Business Man</p>
+            <div className="flex-1">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-md font-semibold text-gray-900">{current.name}</h3>
+                  <p className="text-sm text-gray-500">{current.role}</p>
+                </div>
+                <FaQuoteRight className="text-blue-400 text-2xl" />
+              </div>
+
+              <div className="flex text-yellow-400 mt-2">
+                {Array(5)
+                  .fill()
+                  .map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+              </div>
+
+              <p className="text-sm text-gray-700 mt-3">{current.feedback}</p>
             </div>
-            <FaQuoteRight className="text-blue-400 text-2xl" />
-          </div>
-
-          {/* Stars */}
-          <div className="flex text-yellow-400 mt-2">
-            {Array(5).fill().map((_, i) => (
-              <FaStar key={i} />
-            ))}
-          </div>
-
-          {/* Testimonial */}
-          <p className="text-sm text-gray-700 mt-3">
-            Excellent service! The team was punctual, thorough, and left my home sparkling clean. Highly recommend for anyone needing a reliable and detailed cleaning service.
-          </p>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
-}
+};
 
 
 function App() {
@@ -253,6 +433,7 @@ function App() {
         <GetQuote />
         <CleaningTeam />
         <KnowMore />
+        <PricingPlans />
         <TestimonialSection />
       </main>
     </div>
