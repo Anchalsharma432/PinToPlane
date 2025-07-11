@@ -393,7 +393,7 @@ const TestimonialSection = () => {
             <img
               src={current.image}
               alt={current.name}
-              className="w-20 h-20 rounded-lg object-cover mr-5"
+              className="w-[6rem] h-[8rem] rounded-lg object-cover mr-5"
             />
 
             <div className="flex-1">
@@ -402,10 +402,10 @@ const TestimonialSection = () => {
                   <h3 className="text-md font-semibold text-gray-900">{current.name}</h3>
                   <p className="text-sm text-gray-500">{current.role}</p>
                 </div>
-                <FaQuoteRight className="text-blue-400 text-2xl" />
+                <FaQuoteRight className="text-blue-400 text-[2.5rem]" />
               </div>
 
-              <div className="flex text-yellow-400 mt-2">
+              <div className="flex text-yellow-400  mt-2">
                 {Array(5)
                   .fill()
                   .map((_, i) => (
@@ -413,7 +413,7 @@ const TestimonialSection = () => {
                   ))}
               </div>
 
-              <p className="text-sm text-gray-700 mt-3">{current.feedback}</p>
+              <p className="text-sm text-gray-700 mt-3 text-left">{current.feedback}</p>
             </div>
           </motion.div>
         </AnimatePresence>
