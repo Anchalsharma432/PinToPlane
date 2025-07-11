@@ -32,7 +32,7 @@ const GetQuote = () => {
           </div>
 
           {/* Overlapping front image */}
-          <div className="absolute bottom-[-30px] right-[240px] w-40 sm:w-48 md:w-56 lg:w-60 rounded-xl overflow-hidden shadow-xl border-2 border-white bg-white">
+          <div className="absolute bottom-[-30px] right-[240px] w-40 hidden md:block md:w-56 lg:w-60 rounded-xl overflow-hidden shadow-xl border-2 border-white bg-white">
             <img
               src="/getQuote1.png" // put in public/ folder
               alt="Smiling cleaner"
