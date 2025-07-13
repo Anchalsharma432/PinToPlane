@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar, FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa6";
+import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaStar} from "react-icons/fa6";
 const CleaningTeam = () => {
     const experts = [
       {

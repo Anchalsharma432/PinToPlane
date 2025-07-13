@@ -91,7 +91,8 @@ const TestinomialSection = () => {
       </div>
 
       {/* Right Side: Animated Testimonial Card */}
-      <div className="relative w-full max-w-xl mx-auto min-h-[200px]">
+      {/* <div className="relative w-full max-w-xl mx-auto min-h-[200px]"> */}
+      <div className="relative w-full max-w-xl mx-auto min-h-[180px] rounded-[18px] overflow-hidden border-r-[7px] border-t-[7px] border-[#44acfc] shadow-xl">
         <AnimatePresence custom={direction} mode="wait">
           <motion.div
             key={currentIndex}
