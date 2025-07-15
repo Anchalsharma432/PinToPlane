@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useRef }from 'react'
 import { FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_da4xw6x',
+      'template_opieehj',
+      form.current,
+      'OnzEMIh-lhOoPMLUM'
+    )
+    .then(
+      (result) => {
+        alert("Email sent successfully!");
+      },
+      (error) => {
+        console.error("Email error:", error.text);
+      }
+    );
+  };
   return (<section className="bg-white w-full flex items-center justify-center md:p-10 xl:p-30 lg:p-20 p-5">
       <div className=" bg-white p-10 flex flex-col md:flex-row gap-10 items-stretch">
       {/* Left Side */}
@@ -47,18 +67,21 @@ const Contact = () => {
         <p className="text-gray-600 md:text-md text-sm">
           We prioritize responding to your inquiries promptly to ensure you receive the assistance you need in a timely manner
         </p>
-        <form className="space-y-4">
+        <form ref={form} onSubmit={sendEmail} className="space-y-4">
           <input
+            name='name'
             type="text"
             placeholder="Name"
             className="w-full border border-gray-300 p-3 rounded-lg shadow-md md:text-md text-sm mt-4"
           />
           <input
+            name='email'
             type="email"
             placeholder="Email"
             className="w-full border border-gray-300 p-3 rounded-lg  shadow-md md:text-md text-sm"
           />
           <textarea
+            name='message'
             placeholder="Message"
             rows={4}
             className="w-full border border-gray-300 p-3 rounded-lg  shadow-md md:text-md text-sm"
