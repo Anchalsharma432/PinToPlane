@@ -9,6 +9,7 @@ import ServiceSection from "./components/ServiceSection";
 import CleaningTeam from "./components/CleaningTeam";
 import PricingPlans from "./components/PricingPlans";
 import TestinomialSection from "./components/TestinomialSection";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <PricingPlans />
         <TestinomialSection />
         <Contact />
+        <Footer />
       </main>
     </div>
   );
