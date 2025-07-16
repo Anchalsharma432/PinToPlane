@@ -2,6 +2,7 @@ import React from 'react'
 
 const HersoSection = () => {
   return (
+    <div id="home">
     <section
       className="md:p-10 xl:p-30 lg:p-20 p-5 w-full max-h-[800px] bg-white flex justify-between"
       style={{
@@ -37,6 +38,7 @@ const HersoSection = () => {
         </div>
       </div>
     </section>
+    </div>
   )
 }
 

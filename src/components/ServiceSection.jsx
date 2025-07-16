@@ -2,6 +2,7 @@ import React from 'react'
 
 const ServiceSection = () => {
   return (
+    <div id="services">
     <section className="md:p-10 xl:p-35 lg:p-20 p-5 bg-white">
       <div className="flex md:flex-row flex-col justify-between items-start mb-10">
         <div>
@@ -53,6 +54,7 @@ const ServiceSection = () => {
         ))}
       </div>
     </section>
+    </div>
   )
 }
 

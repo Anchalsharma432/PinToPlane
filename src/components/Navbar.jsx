@@ -13,17 +13,17 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <a href="#" className="hover:text-[#44acfc]">Home</a>
-          <a href="#" className="hover:text-[#44acfc]">About us</a>
-          <a href="#" className="hover:text-[#44acfc]">Service</a>
-          <a href="#" className="hover:text-[#44acfc]">Blog</a>
-          <a href="#" className="hover:text-[#44acfc]">Contact</a>
+          <a href="#home" className="hover:text-[#44acfc]">Home</a>
+          <a href="#about" className="hover:text-[#44acfc]">About us</a>
+          <a href="#services" className="hover:text-[#44acfc]">Service</a>
+          <a href="#blog" className="hover:text-[#44acfc]">Blog</a>
+          <a href="#contact" className="hover:text-[#44acfc]">Contact</a>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
           <a
-            href="#"
+            href="#home"
             className="bg-[#44acfc] text-white px-4 py-2 rounded-md font-medium hover:bg-blue-600 transition"
           >
             Get a quote
@@ -65,13 +65,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 bg-white shadow">
-          <a href="#" className="block text-gray-700 hover:text-[#44acfc]">Home</a>
-          <a href="#" className="block text-gray-700 hover:text-[#44acfc]">About us</a>
-          <a href="#" className="block text-gray-700 hover:text-[#44acfc]">Service</a>
-          <a href="#" className="block text-gray-700 hover:text-[#44acfc]">Blog</a>
-          <a href="#" className="block text-gray-700 hover:text-[#44acfc]">Contact</a>
+          <a href="#home" className="block text-gray-700 hover:text-[#44acfc]">Home</a>
+          <a href="#about" className="block text-gray-700 hover:text-[#44acfc]">About us</a>
+          <a href="#service" className="block text-gray-700 hover:text-[#44acfc]">Service</a>
+          <a href="#blog" className="block text-gray-700 hover:text-[#44acfc]">Blog</a>
+          <a href="#contact" className="block text-gray-700 hover:text-[#44acfc]">Contact</a>
           <a
-            href="#"
+            href="#home"
             className="block bg-[#44acfc] text-white text-center px-4 py-2 rounded-md font-medium hover:bg-blue-600 transition"
           >
             Get a quote

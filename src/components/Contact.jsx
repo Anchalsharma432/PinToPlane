@@ -22,7 +22,9 @@ const Contact = () => {
       }
     );
   };
-  return (<section className="bg-white w-full flex items-center justify-center md:p-10 xl:p-30 lg:p-20 p-5">
+  return (
+    <div id="contact">
+  <section className="bg-white w-full flex items-center justify-center md:p-10 xl:p-30 lg:p-20 p-5">
       <div className=" bg-white p-10 flex flex-col md:flex-row gap-10 items-stretch">
       {/* Left Side */}
       <div className="flex-1 flex flex-col justify-end space-y-8">
@@ -95,7 +97,8 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  </section>)
+  </section>
+  </div>)
 }
 
 export default Contact

@@ -2,6 +2,7 @@ import React from 'react'
 
 const KnowMore = () => {
   return (
+    <div id="about">
     <section className="bg-white w-full flex items-center justify-center md:p-10 xl:p-30 lg:p-20 p-5">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Image Area */}
@@ -58,6 +59,7 @@ const KnowMore = () => {
         
       </div>
     </section>
+    </div>
   )
 }
 
