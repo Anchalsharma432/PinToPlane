@@ -15,6 +15,7 @@ const Contact = () => {
     )
     .then(
       (result) => {
+        form.current.reset();
         alert("Email sent successfully!");
       },
       (error) => {
