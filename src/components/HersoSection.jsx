@@ -25,7 +25,7 @@ const HersoSection = () => {
           We provide performing cleaning tasks using the least <br />
           amount of time, energy, and money.
         </p>
-        <div className="flex gap-4 md:text-xl text-md">
+        <div className="flex gap-4 md:text-xl text-sm">
           <button className="bg-[#44acfc] text-white px-6 py-2 rounded shadow hover:bg-blue-500 md:text-xl text-sm">
             Get Start Now
           </button>

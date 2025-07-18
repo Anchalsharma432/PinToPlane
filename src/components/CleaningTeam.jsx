@@ -19,14 +19,14 @@ const CleaningTeam = () => {
       },
     ];
   return (
-    <section className="md:p-10 xl:p-30 lg:p-20 p-5 max-w-6xl mx-auto">
+    <section className="md:p-10 xl:p-30 lg:p-20 p-5 max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="flex md:flex-row flex-col justify-between items-start text-center mb-10 pb-5 border-b border-[#44acfc]">
             <h2 className=" md:text-5xl text-xl text-left font-bold text-gray-900">
               Effective Cleaning Requires <br /> an Expert Cleaning Team
             </h2>
-            <p className="text-left md:pl-6 pl-0 text-sm text-gray-600 max-w-md md:pt-0 pt-2">
-              <strong className="text-black text-md">Expert Team</strong> <br />
+            <p className="text-left md:pl-6 pl-0 md:text-xl text-sm text-gray-600 max-w-md md:pt-0 pt-2">
+              <strong className="text-black md:text-2xl text-md">Expert Team</strong> <br />
               We have professional expert cleaning staff ensuring top-notch
               cleanliness and hygiene for your space.
             </p>
